@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Drawing;
 using System.Windows.Forms;
 using SemeionModulesDesigner.Helpers;
@@ -24,7 +24,7 @@ namespace SemeionModulesDesigner.UI
             label.Name = container.Name + "Label";
             label.Size = new Size(35, 13);
             label.TabIndex = 0;
-            label.Text = container.Name;
+            label.Text = container.Name.ToReadable();
             return label;
         }
 
@@ -40,7 +40,7 @@ namespace SemeionModulesDesigner.UI
             label.Name = xElement.Name + "Label";
             label.Size = new Size(35, 13);
             label.TabIndex = 0;
-            label.Text = xElement.Name;
+            label.Text = xElement.Name.ToReadable();
             return label;
         }
 
@@ -56,7 +56,7 @@ namespace SemeionModulesDesigner.UI
             label.Name = attribute.Name + "Label";
             label.Size = new Size(35, 13);
             label.TabIndex = 0;
-            label.Text = attribute.Name;
+            label.Text = attribute.Name.ToReadable();
             return label;
         }
 
