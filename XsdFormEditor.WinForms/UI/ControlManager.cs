@@ -197,7 +197,7 @@ namespace SemeionModulesDesigner.UI
         {
             var groupBox = new GroupBox();
             groupBox.Name = rootContainerData.Name;
-            groupBox.Text = rootContainerData.Name;
+            groupBox.Text = rootContainerData.Name.ToReadable();
 
             int tabIndex = 0;
             int x = 10;
