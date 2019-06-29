@@ -188,7 +188,7 @@ namespace SemeionModulesDesigner.XmlSchemaParser
                 //IS ENUMERATION
                 if (xStringRestrictionAttribute.Enumeration.Any())
                 {
-                    xStringRestrictionAttribute.Name = attribute.Name;
+                    xStringRestrictionAttribute.Name = string.IsNullOrEmpty(Attribute.Name) ? Attribute.QualifiedName.Name : Attribute.Name;
                     xStringRestrictionAttribute.Use = (XAttributeUse)attribute.Use;
                     xStringRestrictionAttribute.Value = attribute.DefaultValue;
                     if (xStringRestrictionAttribute.Use == XAttributeUse.None)
